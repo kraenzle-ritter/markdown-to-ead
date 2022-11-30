@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ottosmops\MarkdownToEad\Inline;
+namespace KraenzleRitter\MarkdownToEad\Inline;
 
 use League\CommonMark\Extension\CommonMark\Node\Inline\Strong;
 use League\CommonMark\Node\Node;

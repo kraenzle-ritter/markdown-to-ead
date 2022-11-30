@@ -1,6 +1,6 @@
 <?php
 
-namespace Ottosmops\MarkdownToEad\Facades;
+namespace KraenzleRitter\MarkdownToEad\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

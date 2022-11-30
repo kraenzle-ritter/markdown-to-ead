@@ -1,9 +1,9 @@
 <?php
 
-namespace Ottosmops\MarkdownToEad\Tests;
+namespace KraenzleRitter\MarkdownToEad\Tests;
 
-use Ottosmops\MarkdownToEad\Convert;
-use Ottosmops\MarkdownToEad\Tests\TestCase;
+use KraenzleRitter\MarkdownToEad\Convert;
+use KraenzleRitter\MarkdownToEad\Tests\TestCase;
 
 class MarkdownToEadTest extends TestCase
 {

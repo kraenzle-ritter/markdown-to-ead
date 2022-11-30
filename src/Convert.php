@@ -1,15 +1,15 @@
 <?php
 
-namespace Ottosmops\MarkdownToEad;
+namespace KraenzleRitter\MarkdownToEad;
 
 use League\CommonMark\MarkdownConverter;
 use League\CommonMark\Environment\Environment;
-use Ottosmops\MarkdownToEad\Block\HeadRenderer;
-use Ottosmops\MarkdownToEad\Inline\LinkRenderer;
-use Ottosmops\MarkdownToEad\Inline\StrongRenderer;
-use Ottosmops\MarkdownToEad\Block\ListItemRenderer;
-use Ottosmops\MarkdownToEad\Block\ListBlockRenderer;
-use Ottosmops\MarkdownToEad\Inline\EmphasisRenderer;
+use KraenzleRitter\MarkdownToEad\Block\HeadRenderer;
+use KraenzleRitter\MarkdownToEad\Inline\LinkRenderer;
+use KraenzleRitter\MarkdownToEad\Inline\StrongRenderer;
+use KraenzleRitter\MarkdownToEad\Block\ListItemRenderer;
+use KraenzleRitter\MarkdownToEad\Block\ListBlockRenderer;
+use KraenzleRitter\MarkdownToEad\Inline\EmphasisRenderer;
 use League\CommonMark\Extension\CommonMark\Node\Inline\Link;
 use League\CommonMark\Extension\CommonMark\Node\Block\Heading;
 use League\CommonMark\Extension\CommonMark\Node\Inline\Strong;

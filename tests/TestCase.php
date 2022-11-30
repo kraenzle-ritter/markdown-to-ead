@@ -1,6 +1,6 @@
 <?php
 
-namespace Ottosmops\MarkdownToEad\Tests;
+namespace KraenzleRitter\MarkdownToEad\Tests;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
@@ -14,7 +14,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
     protected function getPackageProviders($app)
     {
         return [
-            'Ottosmops\MarkdownToEad\MarkdownToEadServiceProvider',
+            'KraenzleRitter\MarkdownToEad\MarkdownToEadServiceProvider',
         ];
     }
 }

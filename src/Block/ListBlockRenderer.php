@@ -1,6 +1,6 @@
 <?php
 
-namespace Ottosmops\MarkdownToEad\Block;
+namespace KraenzleRitter\MarkdownToEad\Block;
 
 use League\CommonMark\Extension\CommonMark\Node\Block\ListBlock;
 use League\CommonMark\Node\Node;

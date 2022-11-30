@@ -1,6 +1,6 @@
 <?php
 
-namespace Ottosmops\MarkdownToEad\Block;
+namespace KraenzleRitter\MarkdownToEad\Block;
 
 use League\CommonMark\Extension\CommonMark\Node\Block\ListItem;
 use League\CommonMark\Extension\TaskList\TaskListItemMarker;

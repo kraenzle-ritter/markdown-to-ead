@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
-[![Tests](https://github.com/ottosmops/markdown-to-ead/actions/workflows/run-tests.yml/badge.svg)](https://github.com/ottosmops/markdown-to-ead/actions/workflows/run-tests.yml)
+[![Tests](https://github.com/kraenzle-ritter/markdown-to-ead/actions/workflows/run-tests.yml/badge.svg)](https://github.com/kraenzle-ritter/markdown-to-ead/actions/workflows/run-tests.yml)
 
 
 Convert Markdown Snippets to EAD 2002.
@@ -20,13 +20,13 @@ Convert Markdown Snippets to EAD 2002.
 ## Installation
 
 ```bash
-composer require ottosmops/markdown-to-ead
+composer require kraenzle-ritter/markdown-to-ead
 ````
 
 ## Usage
 
 ```php 
-use Ottosmops\MarkdownToEad\Convert;
+use KraenzleRitter\MarkdownToEad\Convert;
 
 $markdown = '# Überschrift
 
@@ -51,12 +51,11 @@ $xml = $converter->toEad($markdown);
 
 MIT. Please see the [license file](LICENSE.md) for more information.
 
+[ico-version]: https://img.shields.io/packagist/v/kraenzle-ritter/markdown-to-ead.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/kraenzle-ritter/markdown-to-ead.svg?style=flat-square
 
-[ico-version]: https://img.shields.io/packagist/v/ottosmops/markdown-to-ead.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/ottosmops/markdown-to-ead.svg?style=flat-square
 
-
-[link-packagist]: https://packagist.org/packages/ottosmops/markdown-to-ead
-[link-downloads]: https://packagist.org/packages/ottosmops/markdown-to-ead
-[link-author]: https://github.com/ottosmops
+[link-packagist]: https://packagist.org/packages/kraenzle-ritter/markdown-to-ead
+[link-downloads]: https://packagist.org/packages/kraenzle-ritter/markdown-to-ead
+[link-author]: https://github.com/kraenzle-ritter
 [link-contributors]: ../../contributors

@@ -1,6 +1,6 @@
 <?php
 
-namespace Ottosmops\MarkdownToEad;
+namespace KraenzleRitter\MarkdownToEad;
 
 use Illuminate\Support\ServiceProvider;
 
