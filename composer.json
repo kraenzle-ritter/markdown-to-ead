@@ -1,0 +1,46 @@
+{
+    "name": "ottosmops/markdown-to-ead",
+    "description": "Convert Markdown to EAD (Encoding Archival Description)",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ak",
+            "email": "kraenzle@k-r.ch",
+            "homepage": "https://www.k-r.ch"
+        }
+    ],
+    "homepage": "https://github.com/ottosmops/markdown-to-ead",
+    "keywords": [
+        "Laravel",
+        "Markdown",
+        "EAD"
+    ],
+    "require": {
+        "laravel/framework": "^9",
+        "league/commonmark": "^2.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "orchestra/testbench": "^7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ottosmops\\MarkdownToEad\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ottosmops\\MarkdownToEad\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ottosmops\\MarkdownToEad\\MarkdownToEadServiceProvider"
+            ],
+            "aliases": {
+                "Antondate": "Ottosmops\\MarkdownToEad\\Facades\\MarkdownToEad"
+            }
+        }
+    }
+}
