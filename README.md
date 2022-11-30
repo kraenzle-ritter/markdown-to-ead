@@ -50,3 +50,13 @@ $xml = $converter->toEad($markdown);
 ## License
 
 MIT. Please see the [license file](LICENSE.md) for more information.
+
+
+[ico-version]: https://img.shields.io/packagist/v/ottosmops/markdown-to-ead.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/ottosmops/markdown-to-ead.svg?style=flat-square
+
+
+[link-packagist]: https://packagist.org/packages/ottosmops/markdown-to-ead
+[link-downloads]: https://packagist.org/packages/ottosmops/markdown-to-ead
+[link-author]: https://github.com/ottosmops
+[link-contributors]: ../../contributors
