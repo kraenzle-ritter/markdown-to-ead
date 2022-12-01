@@ -24,7 +24,7 @@ class MarkdownToEadTest extends TestCase
 
         $converter = new Convert();
         $actual = trim($converter->toEad($markdown));
-        $expected = '<p>Die Unterlagen des BPW Club Zürich bilden einen eigenen Bestand. In diesem befinden sich auch Unterlagen zum Schweizerischen Verband. <ref href="https://gosteli.anton.ch/objects/18979">AGoF 120 Archiv Club der Zürcher Berufs- und Geschäftsfrauen</ref></p>';
+        $expected = '<p>Die Unterlagen des BPW Club Zürich bilden einen eigenen Bestand. In diesem befinden sich auch Unterlagen zum Schweizerischen Verband. <extref xlink:href="https://gosteli.anton.ch/objects/18979">AGoF 120 Archiv Club der Zürcher Berufs- und Geschäftsfrauen</extref></p>';
 
         $this->assertEquals(trim($expected), $actual);
     }
@@ -57,7 +57,7 @@ Inline [Link](url).
 ';
         $converter = new Convert();
         $actual = $converter->toEad($markdown);
-        $expected = '<head>Überschrift</head><p>Paragraph <emph render="italic">kursiv</emph> <emph render="bold">fett</emph></p><list><item>Item 1</item><item>Item 2</item></list><p>Inline <ref href="url">Link</ref>.</p>';
+        $expected = '<head>Überschrift</head><p>Paragraph <emph render="italic">kursiv</emph> <emph render="bold">fett</emph></p><list><item>Item 1</item><item>Item 2</item></list><p>Inline <extref xlink:href="url">Link</extref>.</p>';
         $this->assertEquals($expected, $actual);
     }
 }
