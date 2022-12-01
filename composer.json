@@ -16,7 +16,6 @@
     "EAD"
   ],
   "require": {
-    "laravel/framework": "^9",
     "league/commonmark": "^2.3"
   },
   "require-dev": {
@@ -31,16 +30,6 @@
   "autoload-dev": {
     "psr-4": {
       "KraenzleRitter\\MarkdownToEad\\Tests\\": "tests"
-    }
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "KraenzleRitter\\MarkdownToEad\\MarkdownToEadServiceProvider"
-      ],
-      "aliases": {
-        "Antondate": "KraenzleRitter\\MarkdownToEad\\Facades\\MarkdownToEad"
-      }
     }
   }
 }
