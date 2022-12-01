@@ -24,20 +24,13 @@ class LinkRenderer implements NodeRendererInterface, XmlNodeRendererInterface, C
 
         $attrs = $node->data->get('attributes');
 
-        $forbidUnsafeLinks = ! $this->config->get('allow_unsafe_links');
-        if (! ($forbidUnsafeLinks && RegexHelper::isLinkPotentiallyUnsafe($node->getUrl()))) {
-            $attrs['href'] = $node->getUrl();
-        }
+        $attrs['xlink:href'] = $node->getUrl();
 
         if (($title = $node->getTitle()) !== null) {
-            $attrs['title'] = $title;
+            $attrs['xlink:title'] = $title;
         }
 
-        if (isset($attrs['target']) && $attrs['target'] === '_blank' && ! isset($attrs['rel'])) {
-            $attrs['rel'] = 'noopener noreferrer';
-        }
-
-        return new HtmlElement('ref', $attrs, $childRenderer->renderNodes($node->children()));
+        return new HtmlElement('extref', $attrs, $childRenderer->renderNodes($node->children()));
     }
 
     public function setConfiguration(ConfigurationInterface $configuration): void
