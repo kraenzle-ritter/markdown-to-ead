@@ -12,7 +12,7 @@ Convert Markdown Snippets to EAD 2002.
 |#, ##, etc | `<head>` |
 | Lists     | `<list>` | 
 | ListItems (*) | `<item>` |
-| Links `[text](url)` | `<ref href="url">text</ref>`|
+| Links `[text](url)` | `<extref xlink:href="url">text</extref>`|
 | Strong (`**bold**`) | `<emph render="bold">` |
 | Emaphasis (`_italic_`) | `<emph render="italic">` |
 
@@ -42,7 +42,7 @@ $converter = new Convert();
 $xml = $converter->toEad($markdown);
 
 /**
-<head>Überschrift</head><p>Paragraph <emph render="italic">kursiv</emph> <emph render="bold">fett</emph></p><list><item>Item 1</item><item>Item 2</item></list><p>Inline <ref href="url">Link</ref>.</p>
+<head>Überschrift</head><p>Paragraph <emph render="italic">kursiv</emph> <emph render="bold">fett</emph></p><list><item>Item 1</item><item>Item 2</item></list><p>Inline <extref xlink:href="url">Link</extref>.</p>
 */
 ```
 
