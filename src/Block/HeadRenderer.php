@@ -15,7 +15,7 @@ class HeadRenderer implements NodeRendererInterface
     {
         Heading::assertInstanceOf($node);
 
-        $tag = 'head';
+        $tag = 'p';
 
         $attrs = []; //'level' => (string) $node->getLevel()
 
