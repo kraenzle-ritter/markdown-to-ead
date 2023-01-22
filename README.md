@@ -11,7 +11,7 @@ Convert Markdown Snippets to EAD 2002.
 
 |Markdown| EAD |
 |--------|-----|
-|#, ##, etc | `<head>` |
+|#, ##, etc | `<p>` (since ead does not allow titles, heads within the fields |
 | Lists     | `<list>` | 
 | ListItems (*) | `<item>` |
 | Links `[text](url)` | `<extref xlink:href="url">text</extref>`|
