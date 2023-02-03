@@ -41,7 +41,7 @@ class Convert
         if ($newlines) {
             return $xml;
         }
-        return  trim(str_replace("\n", "", $xml));
+        return  trim(str_replace(["\n", "<br/>"], "", $xml));
     }
 
 
