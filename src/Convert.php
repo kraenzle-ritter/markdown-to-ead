@@ -8,6 +8,7 @@ use KraenzleRitter\MarkdownToEad\Block\HeadRenderer;
 use KraenzleRitter\MarkdownToEad\Inline\LinkRenderer;
 use KraenzleRitter\MarkdownToEad\Inline\StrongRenderer;
 use KraenzleRitter\MarkdownToEad\Block\ListItemRenderer;
+use KraenzleRitter\MarkdownToEad\MarkdownToEadExtension;
 use KraenzleRitter\MarkdownToEad\Block\ListBlockRenderer;
 use KraenzleRitter\MarkdownToEad\Inline\EmphasisRenderer;
 use League\CommonMark\Extension\CommonMark\Node\Inline\Link;
@@ -23,7 +24,7 @@ class Convert
     public function __construct()
     {
         $environment = new Environment();
-        $environment->addExtension(new CommonMarkCoreExtension());
+        $environment->addExtension(new MarkdownToEadExtension());
         $environment->addRenderer(Heading::class, new HeadRenderer());
         $environment->addRenderer(Link::class, new LinkRenderer());
         $environment->addRenderer(ListBlock::class, new ListBlockRenderer());

@@ -17,6 +17,17 @@ class MarkdownToEadTest extends TestCase
         $this->assertEquals(trim((string) $expected), (string) $actual);
     }
 
+    public function test_ordered_list()
+    {
+        $markdown = '53. Äbtissin';
+
+        $converter = new Convert();
+        $actual = trim($converter->toEad($markdown));
+        $expected = '<p>53. Äbtissin</item></p>';
+        $this->assertEquals(trim((string) $expected), (string) $actual);
+    }
+
+
     public function test_links()
     {
         $markdown = 'Die Unterlagen des BPW Club Zürich bilden einen eigenen Bestand. In diesem befinden sich auch Unterlagen zum Schweizerischen Verband. [AGoF 120 Archiv Club der Zürcher Berufs- und Geschäftsfrauen](https://gosteli.anton.ch/objects/18979)';

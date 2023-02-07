@@ -24,12 +24,17 @@ final class ListBlockRenderer implements NodeRendererInterface, XmlNodeRendererI
 
         $listData = $node->getListData();
 
-        $tag = $listData->type === ListBlock::TYPE_BULLET ? 'list' : 'list';
+        if ($listData->type === ListBlock::TYPE_BULLET) {
+            $tag = 'list';
+            $attrs = $node->data->get('attributes');
 
-        $attrs = $node->data->get('attributes');
-
-        if ($listData->start !== null && $listData->start !== 1) {
-            $attrs['start'] = (string) $listData->start;
+            if ($listData->start !== null && $listData->start !== 1) {
+                $attrs['start'] = (string) $listData->start;
+            }
+        } else {
+            $tag = 'p';
+            $innerSeparator = $childRenderer->getInnerSeparator();
+            return new HtmlElement($tag, [], $childRenderer->renderNodes($node->children()));
         }
 
         $innerSeparator = $childRenderer->getInnerSeparator();
