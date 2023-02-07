@@ -23,7 +23,7 @@ class MarkdownToEadTest extends TestCase
 
         $converter = new Convert();
         $actual = trim($converter->toEad($markdown));
-        $expected = '<p>53. Äbtissin</item></p>';
+        $expected = '<p>53. Äbtissin</p>';
         $this->assertEquals(trim((string) $expected), (string) $actual);
     }
 
