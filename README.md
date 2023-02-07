@@ -5,11 +5,13 @@
 [![Tests](https://github.com/kraenzle-ritter/markdown-to-ead/actions/workflows/run-tests.yml/badge.svg)](https://github.com/kraenzle-ritter/markdown-to-ead/actions/workflows/run-tests.yml)
 
 
+**Don´t use this package. It has a very special pupose within anton (anton.ch).**
+
 Convert Markdown Snippets to EAD 2002.
 
 |Markdown| EAD |
 |--------|-----|
-|#, ##, etc | `<head>` |
+|#, ##, etc | `<p>` (since ead does not allow titles, heads within the fields |
 | Lists     | `<list>` | 
 | ListItems (*) | `<item>` |
 | Links `[text](url)` | `<extref xlink:href="url">text</extref>`|
