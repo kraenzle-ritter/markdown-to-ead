@@ -2,6 +2,7 @@
 
 namespace KraenzleRitter\MarkdownToEad;
 
+
 use League\CommonMark\MarkdownConverter;
 use League\CommonMark\Environment\Environment;
 use KraenzleRitter\MarkdownToEad\Block\HeadRenderer;
@@ -17,7 +18,9 @@ use League\CommonMark\Extension\CommonMark\Node\Inline\Strong;
 use League\CommonMark\Extension\CommonMark\Node\Block\ListItem;
 use League\CommonMark\Extension\CommonMark\Node\Block\ListBlock;
 use League\CommonMark\Extension\CommonMark\Node\Inline\Emphasis;
+use League\CommonMark\Extension\CommonMark\Node\Inline\HtmlInline;
 use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
+use League\CommonMark\Extension\CommonMark\Renderer\Inline\HtmlInlineRenderer;
 
 class Convert
 {
@@ -31,7 +34,7 @@ class Convert
         $environment->addRenderer(ListItem::class, new ListItemRenderer());
         $environment->addRenderer(Emphasis::class, new EmphasisRenderer());
         $environment->addRenderer(Strong::class, new StrongRenderer());
-
+        $environment->addRenderer(HtmlInline::class,  new HtmlInlineRenderer());
         $this->converter = new MarkdownConverter($environment);
 
     }

@@ -27,6 +27,16 @@ class MarkdownToEadTest extends TestCase
         $this->assertEquals(trim((string) $expected), (string) $actual);
     }
 
+    public function test_html()
+    {
+        $markdown = 'bla <br> bla';
+
+        $converter = new Convert();
+        $actual = trim($converter->toEad($markdown));
+        $expected = '<p>bla <br> bla</p>';
+        $this->assertEquals(trim((string) $expected), (string) $actual);
+    }
+
 
     public function test_links()
     {

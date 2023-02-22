@@ -83,7 +83,7 @@ final class MarkdownToEadExtension implements ConfigurableExtensionInterface
             ->addRenderer(CoreNode\Block\Document::class,  new DocumentRenderer(),  0)
             //->addRenderer(Node\Block\FencedCode::class,    new FencedCodeRenderer(),    0)
             ->addRenderer(Node\Block\Heading::class,       new HeadingRenderer(),       0)
-            ->addRenderer(Node\Block\HtmlBlock::class,     new HtmlBlockRenderer(),     0)
+            //->addRenderer(Node\Block\HtmlBlock::class,     new HtmlBlockRenderer(),     0)
             ->addRenderer(Node\Block\IndentedCode::class,  new IndentedCodeRenderer(),  0)
             ->addRenderer(Node\Block\ListBlock::class,     new ListBlockRenderer(),     0)
             ->addRenderer(Node\Block\ListItem::class,      new ListItemRenderer(),      0)
